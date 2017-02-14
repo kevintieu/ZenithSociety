@@ -15,9 +15,12 @@ namespace ZenithDataLib.Models
         public int EventId { get; set; }
         // [DisplayFormat(DataFormatString = "{0:h:mm tt}")]
 
+        [Required(ErrorMessage = "Events must have a starting time.")]
         [Display(Name = "Starting Time")]
         public DateTime EventFrom { get; set; }
 
+
+        [Required(ErrorMessage = "Events must have an ending time.")]
         [Display(Name = "Ending time")]
         public DateTime EventTo { get; set; }
 
